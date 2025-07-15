@@ -8,3 +8,11 @@ export async function updateAlpha() {
   });
   return response.json();
 }
+
+export async function fetchAlpha() {
+  const response = await fetch("/fetchAlpha", {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+  });
+  return response.json();
+}

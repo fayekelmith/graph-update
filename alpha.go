@@ -2,17 +2,12 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 )
 
 func Alpha() {
-    Beta()
-    Gamma()
-}
-
-func AlphaHelper() {
-    fmt.Println("Alpha Function Helper")
+    Delta() 
+    NewHelper()
 }
 
 func FetchAlphaHandler(w http.ResponseWriter, r *http.Request) {

@@ -1,5 +1,9 @@
 package main
 
 func Beta() {
-    Alpha()
+     ExistingUtil()
+}
+
+func NewBetaFunction() {
+    Delta()
 }

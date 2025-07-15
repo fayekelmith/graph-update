@@ -23,6 +23,7 @@ func NewRouter() *http.Server {
 		r.Post("/person", CreatePerson)
 		r.Get("/people", GetPeople)
 		r.Get("/fetchAlpha", FetchAlphaHandler)
+		r.Post("/updateAlpha", UpdateAlphaHandler)
 	})
 
 	PORT := os.Getenv("PORT")
@@ -106,4 +107,8 @@ func initChi() *chi.Mux {
 	r.Use(cors.Handler)
 	r.Use(middleware.Timeout(60 * time.Second))
 	return r
+}
+func UpdateAlphaHandler(w http.ResponseWriter, r *http.Request) {
+    w.WriteHeader(http.StatusOK)
+    json.NewEncoder(w).Encode(map[string]string{"status": "Alpha updated"})
 }
