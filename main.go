@@ -16,6 +16,9 @@ func main() {
 	fmt.Println("Hello, World!")
 	InitDB()
 
+	fmt.Println("Demo repo")
+    Alpha() 
+
 	router := NewRouter()
 
 	shutdownSignal := make(chan os.Signal, 1)

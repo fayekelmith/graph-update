@@ -22,6 +22,7 @@ func NewRouter() *http.Server {
 		r.Get("/person/{id}", GetPerson)
 		r.Post("/person", CreatePerson)
 		r.Get("/people", GetPeople)
+		r.Get("/fetchAlpha", FetchAlphaHandler)
 	})
 
 	PORT := os.Getenv("PORT")
